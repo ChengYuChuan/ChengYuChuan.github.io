@@ -1,0 +1,39 @@
+---
+title: "Why SHAP values still confuse practitioners"
+date: 2025-04-18
+categories: [ML, Paper]
+description: "Reading the original Lundberg & Lee paper again. The gap between what SHAP promises and how people interpret it."
+---
+
+## 讀了什麼
+
+Lundberg & Lee (2017), *A Unified Approach to Interpreting Model Predictions*.
+
+## 三個核心問題
+
+**1. Shapley value 的假設不符合實際使用場景**
+
+原始 SHAP 的 marginal imputation 假設 feature 之間獨立，但現實的 ML 資料幾乎都有 correlation。
+這導致 feature attribution 在高度相關的特徵之間會失真。
+
+**2. 「重要性」≠「因果性」**
+
+實務上最常見的誤解：SHAP 高的 feature 不代表它是造成預測的原因，只代表它在這個模型裡有預測力。
+這個區別在向 business stakeholders 解釋時特別重要。
+
+**3. Global vs. local 解釋的混用**
+
+SHAP summary plot 混合了 local 解釋（單一樣本的貢獻）和 global 趨勢，
+容易讓人產生「模型整體上依賴這個 feature」的錯誤印象。
+
+## 自己的想法
+
+做 MM-SHAP 的時候就踩過第一個坑。
+Vision-language model 的 image / text modality 之間本來就不獨立，
+marginal vs. conditional imputation 的差異在那個情境下非常明顯。
+
+下次讀：[TreeExplainer paper](https://arxiv.org/abs/1905.04610) 看看 tree 模型是否有更乾淨的解法。
+
+---
+
+*這是粗糙的閱讀筆記，不是正式的 literature review。*

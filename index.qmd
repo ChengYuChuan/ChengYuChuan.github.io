@@ -1,0 +1,14 @@
+---
+title: "Things I read, and what I made of them."
+subtitle: "ML engineer based in Germany. Notes on tech, papers, social science, and whatever else catches my attention."
+listing:
+  contents: posts
+  sort: "date desc"
+  type: table
+  fields: [date, title, categories]
+  categories: true
+  sort-ui: false
+  filter-ui: true
+  date-format: "MMM D"
+page-layout: full
+---
