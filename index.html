@@ -41,10 +41,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c39620ce0c641987dbb710222dd1ce48.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-37515bafc6083f81017eb041f86a7c50.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -75,20 +75,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-notes-listing .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-notes-listing'] = new List('listing-notes-listing', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -164,13 +164,6 @@ window.Quarto = {
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/your-username"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-</ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
@@ -189,7 +182,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Things I read, and what I made of them.</h1>
-<p class="subtitle lead">ML engineer based in Germany. Notes on tech, papers, social science, and whatever else catches my attention.</p>
+<p class="subtitle lead">ML engineer based in Germany. I read across technical papers, social science, and anything in between. These are rough notes — thinking out loud, not polished essays.</p>
 </div>
 
 
@@ -206,67 +199,94 @@ window.Quarto = {
 </header>
 
 
+<div class="home-grid">
+<div class="notes-col">
+<p><span class="section-label">RECENT NOTES</span></p>
+<div id="listing-notes-listing" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="TUwlMkNQYXBlcg==" data-listing-date-sort="1744927200000" data-listing-file-modified-sort="1777129346172" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/2025-04-18-shap-practitioners.html" class="no-external">Why SHAP values still confuse practitioners</a>
+</h3>
+<div class="listing-categories">
 
+<div class="listing-category" onclick="window.quartoListingCategory('TUw='); return false;">ML</div>
 
+<div class="listing-category" onclick="window.quartoListingCategory('UGFwZXI='); return false;">Paper</div>
 
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
 </div>
-<table class="quarto-listing-table table">
-<thead>
-<tr>
+<div class="delink listing-description"><a href="./posts/2025-04-18-shap-practitioners.html" class="no-external">
+<p>Reading the original Lundberg &amp; Lee paper again. The gap between what SHAP promises and how people interpret it.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/2025-04-18-shap-practitioners.html" class="no-external">
+<div class="listing-date">
+Apr 18
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="U29jaWFsJTIwU2NpZW5jZQ==" data-listing-date-sort="1744149600000" data-listing-file-modified-sort="1777129346171" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="10">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/2025-04-09-housing-policy.html" class="no-external">住宅政策比較：台灣、德國、瑞典</a>
+</h3>
+<div class="listing-categories">
 
-<th>
-Date
-</th>
+<div class="listing-category" onclick="window.quartoListingCategory('U29jaWFsJTIwU2NpZW5jZQ=='); return false;">Social Science</div>
 
-<th>
-Title
-</th>
-
-<th>
-Categories
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-categories="TUwlMkNQYXBlcg==" data-listing-date-sort="1744927200000" data-listing-file-modified-sort="1777129346172" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67" data-listing-title-sort="Why SHAP values still confuse practitioners" data-listing-filename-sort="2025-04-18-shap-practitioners.qmd">
-<td>
-<span class="listing-date">Apr 18</span>
-</td>
-<td>
-<a href="./posts/2025-04-18-shap-practitioners.html" class="title listing-title">Why SHAP values still confuse practitioners</a>
-</td>
-<td>
-<span class="listing-categories">ML, Paper</span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-categories="U29jaWFsJTIwU2NpZW5jZQ==" data-listing-date-sort="1744149600000" data-listing-file-modified-sort="1777129346171" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="10" data-listing-title-sort="住宅政策比較：台灣、德國、瑞典" data-listing-filename-sort="2025-04-09-housing-policy.qmd">
-<td>
-<span class="listing-date">Apr 9</span>
-</td>
-<td>
-<a href="./posts/2025-04-09-housing-policy.html" class="title listing-title">住宅政策比較：台灣、德國、瑞典</a>
-</td>
-<td>
-<span class="listing-categories">Social Science</span>
-</td>
-
-</tr>
-
-</tbody>
-</table>
+</div>
+<div class="delink listing-description"><a href="./posts/2025-04-09-housing-policy.html" class="no-external">
+<p>三個國家面對相似問題走出完全不同的路。租金管制真的有效嗎？</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/2025-04-09-housing-policy.html" class="no-external">
+<div class="listing-date">
+Apr 9
+</div>
+</a>
+</div>
+</div>
+</div>
 <div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</div>
+</div>
+<div class="sidebar-col">
+<div class="sidebar-box">
+<p><span class="sidebar-label">CURRENTLY READING</span></p>
+<ul>
+<li>The Alignment Problem — Brian Christian</li>
+<li>Flash Boys — Michael Lewis</li>
+<li>Scaling Laws for Neural Language Models (paper)</li>
+</ul>
+</div>
+<div class="sidebar-box">
+<p><span class="sidebar-label">LINKS</span></p>
+<ul>
+<li><a href="https://github.com/your-username">GitHub</a></li>
+<li><a href="https://linkedin.com">LinkedIn</a></li>
+</ul>
+</div>
+</div>
+</div>
+<script>
+// Move listing category tags from .metadata into .body so they appear below the description
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.quarto-post').forEach(function (post) {
+    var cats = post.querySelector('.listing-categories');
+    var body = post.querySelector('.body');
+    if (cats && body) body.appendChild(cats);
+  });
+});
+</script>
+
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
