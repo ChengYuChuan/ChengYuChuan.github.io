@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-04-09">
+<meta name="description" content="三個國家面對相似問題走出完全不同的路。租金管制真的有效嗎？">
 
-<title>Things I read, and what I made of them. – Yu-Chuan · Notes</title>
+<title>住宅政策比較：台灣、德國、瑞典 – Yu-Chuan · Notes</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,25 +28,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c39620ce0c641987dbb710222dd1ce48.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-c39620ce0c641987dbb710222dd1ce48.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,76 +72,18 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Yu-Chuan · Notes</span>
     </a>
   </div>
@@ -152,15 +94,15 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link" href="../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -178,25 +120,37 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TUw=">ML <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGFwZXI=">Paper <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U29jaWFsJTIwU2NpZW5jZQ==">Social Science <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Things I read, and what I made of them.</h1>
-<p class="subtitle lead">ML engineer based in Germany. Notes on tech, papers, social science, and whatever else catches my attention.</p>
+<h1 class="title">住宅政策比較：台灣、德國、瑞典</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Social Science</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    三個國家面對相似問題走出完全不同的路。租金管制真的有效嗎？
+  </div>
 </div>
 
 
-
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 9, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -206,67 +160,29 @@ window.Quarto = {
 </header>
 
 
+<section id="讀了什麼" class="level2">
+<h2 class="anchored" data-anchor-id="讀了什麼">讀了什麼</h2>
+<p>相關報告與比較政策文獻，主要對照台灣、德國、瑞典的住宅政策框架。</p>
+</section>
+<section id="最讓我印象深刻的事" class="level2">
+<h2 class="anchored" data-anchor-id="最讓我印象深刻的事">最讓我印象深刻的事</h2>
+<p>德國的 Mietpreisbremse（租金剎車）法規理論上很強， 但實際執行效果非常依賴租客主動舉報，導致執行率低。</p>
+<p>相比之下，瑞典是把公共住宅（allmännytta）做成市場的 anchor， 而不是靠法規壓制私人市場，兩者邏輯完全不同。</p>
+</section>
+<section id="台灣的狀況" class="level2">
+<h2 class="anchored" data-anchor-id="台灣的狀況">台灣的狀況</h2>
+<p>台灣的問題更複雜：住宅兼具「居住」和「資產保值」的雙重功能， 這讓任何壓低房價的政策都會直接碰到中產階級的政治阻力。</p>
+</section>
+<section id="和自己生活的連結" class="level2">
+<h2 class="anchored" data-anchor-id="和自己生活的連結">和自己生活的連結</h2>
+<p>在德國住了幾年，親身感受到 Mietpreisbremse 在 Heidelberg 幾乎是擺設。 理論上房東漲租有上限，實際上換租客就可以重新定價。</p>
+<hr>
+<p><em>這是閱讀筆記。若有錯誤歡迎指正。</em></p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-
-<th>
-Date
-</th>
-
-<th>
-Title
-</th>
-
-<th>
-Categories
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-categories="TUwlMkNQYXBlcg==" data-listing-date-sort="1744927200000" data-listing-file-modified-sort="1777129346172" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67" data-listing-title-sort="Why SHAP values still confuse practitioners" data-listing-filename-sort="2025-04-18-shap-practitioners.qmd">
-<td>
-<span class="listing-date">Apr 18</span>
-</td>
-<td>
-<a href="./posts/2025-04-18-shap-practitioners.html" class="title listing-title">Why SHAP values still confuse practitioners</a>
-</td>
-<td>
-<span class="listing-categories">ML, Paper</span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-categories="U29jaWFsJTIwU2NpZW5jZQ==" data-listing-date-sort="1744149600000" data-listing-file-modified-sort="1777129346171" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="10" data-listing-title-sort="住宅政策比較：台灣、德國、瑞典" data-listing-filename-sort="2025-04-09-housing-policy.qmd">
-<td>
-<span class="listing-date">Apr 9</span>
-</td>
-<td>
-<a href="./posts/2025-04-09-housing-policy.html" class="title listing-title">住宅政策比較：台灣、德國、瑞典</a>
-</td>
-<td>
-<span class="listing-categories">Social Science</span>
-</td>
-
-</tr>
-
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
