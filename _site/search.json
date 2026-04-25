@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "ML engineer with a background in Scientific Computing (Heidelberg University). I work on ML systems and occasionally write notes on things I’ve been reading.\nThese are rough notes — thinking out loud, not polished essays.\nCurrently based in: Germany (Weinheim / Heidelberg area)\n\n\nGitHub\nLinkedIn"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Enterprise Knowledge Agent Platform\nRAG + Agent architecture using LlamaIndex, LangChain, FastAPI, and MCP. → GitHub\n\n\n\nSHAP Imputer API\nMulti-framework SHAP value computation supporting PyTorch, JAX, NumPy, pandas, polars. → GitHub\n\nMore on GitHub →"
+  },
+  {
+    "objectID": "posts/2025-04-09-housing-policy.html",
+    "href": "posts/2025-04-09-housing-policy.html",
+    "title": "住宅政策比較：台灣、德國、瑞典",
+    "section": "",
+    "text": "相關報告與比較政策文獻，主要對照台灣、德國、瑞典的住宅政策框架。"
+  },
+  {
+    "objectID": "posts/2025-04-09-housing-policy.html#讀了什麼",
+    "href": "posts/2025-04-09-housing-policy.html#讀了什麼",
+    "title": "住宅政策比較：台灣、德國、瑞典",
+    "section": "",
+    "text": "相關報告與比較政策文獻，主要對照台灣、德國、瑞典的住宅政策框架。"
+  },
+  {
+    "objectID": "posts/2025-04-09-housing-policy.html#最讓我印象深刻的事",
+    "href": "posts/2025-04-09-housing-policy.html#最讓我印象深刻的事",
+    "title": "住宅政策比較：台灣、德國、瑞典",
+    "section": "最讓我印象深刻的事",
+    "text": "最讓我印象深刻的事\n德國的 Mietpreisbremse（租金剎車）法規理論上很強， 但實際執行效果非常依賴租客主動舉報，導致執行率低。\n相比之下，瑞典是把公共住宅（allmännytta）做成市場的 anchor， 而不是靠法規壓制私人市場，兩者邏輯完全不同。"
+  },
+  {
+    "objectID": "posts/2025-04-09-housing-policy.html#台灣的狀況",
+    "href": "posts/2025-04-09-housing-policy.html#台灣的狀況",
+    "title": "住宅政策比較：台灣、德國、瑞典",
+    "section": "台灣的狀況",
+    "text": "台灣的狀況\n台灣的問題更複雜：住宅兼具「居住」和「資產保值」的雙重功能， 這讓任何壓低房價的政策都會直接碰到中產階級的政治阻力。"
+  },
+  {
+    "objectID": "posts/2025-04-09-housing-policy.html#和自己生活的連結",
+    "href": "posts/2025-04-09-housing-policy.html#和自己生活的連結",
+    "title": "住宅政策比較：台灣、德國、瑞典",
+    "section": "和自己生活的連結",
+    "text": "和自己生活的連結\n在德國住了幾年，親身感受到 Mietpreisbremse 在 Heidelberg 幾乎是擺設。 理論上房東漲租有上限，實際上換租客就可以重新定價。\n\n這是閱讀筆記。若有錯誤歡迎指正。"
+  },
+  {
+    "objectID": "posts/2025-04-18-shap-practitioners.html",
+    "href": "posts/2025-04-18-shap-practitioners.html",
+    "title": "Why SHAP values still confuse practitioners",
+    "section": "",
+    "text": "Lundberg & Lee (2017), A Unified Approach to Interpreting Model Predictions."
+  },
+  {
+    "objectID": "posts/2025-04-18-shap-practitioners.html#讀了什麼",
+    "href": "posts/2025-04-18-shap-practitioners.html#讀了什麼",
+    "title": "Why SHAP values still confuse practitioners",
+    "section": "",
+    "text": "Lundberg & Lee (2017), A Unified Approach to Interpreting Model Predictions."
+  },
+  {
+    "objectID": "posts/2025-04-18-shap-practitioners.html#三個核心問題",
+    "href": "posts/2025-04-18-shap-practitioners.html#三個核心問題",
+    "title": "Why SHAP values still confuse practitioners",
+    "section": "三個核心問題",
+    "text": "三個核心問題\n1. Shapley value 的假設不符合實際使用場景\n原始 SHAP 的 marginal imputation 假設 feature 之間獨立，但現實的 ML 資料幾乎都有 correlation。 這導致 feature attribution 在高度相關的特徵之間會失真。\n2. 「重要性」≠「因果性」\n實務上最常見的誤解：SHAP 高的 feature 不代表它是造成預測的原因，只代表它在這個模型裡有預測力。 這個區別在向 business stakeholders 解釋時特別重要。\n3. Global vs. local 解釋的混用\nSHAP summary plot 混合了 local 解釋（單一樣本的貢獻）和 global 趨勢， 容易讓人產生「模型整體上依賴這個 feature」的錯誤印象。"
+  },
+  {
+    "objectID": "posts/2025-04-18-shap-practitioners.html#自己的想法",
+    "href": "posts/2025-04-18-shap-practitioners.html#自己的想法",
+    "title": "Why SHAP values still confuse practitioners",
+    "section": "自己的想法",
+    "text": "自己的想法\n做 MM-SHAP 的時候就踩過第一個坑。 Vision-language model 的 image / text modality 之間本來就不獨立， marginal vs. conditional imputation 的差異在那個情境下非常明顯。\n下次讀：TreeExplainer paper 看看 tree 模型是否有更乾淨的解法。\n\n這是粗糙的閱讀筆記，不是正式的 literature review。"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Yu-Chuan · Notes",
+    "section": "",
+    "text": "Reading log\n  Things I read, and what I made of them.\n  ML engineer based in Germany. I read across technical papers, social science, and anything in between. These are rough notes — thinking out loud, not polished essays.\n\n\n\n\nRecent notes\n\n\n\n\n\n\nWhy SHAP values still confuse practitioners\n\n\n\nML\n\nPaper\n\n\n\nReading the original Lundberg & Lee paper again. The gap between what SHAP promises and how people interpret it.\n\n\n\n\n\nApr 18\n\n\n\n\n\n\n\n住宅政策比較：台灣、德國、瑞典\n\n\n\nSocial Science\n\n\n\n三個國家面對相似問題走出完全不同的路。租金管制真的有效嗎？\n\n\n\n\n\nApr 9\n\n\n\n\n\nNo matching items\n\n\n\n\n  Currently reading\n  The Alignment Problem — Brian Christian\n  Flash Boys — Michael Lewis\n  Scaling Laws for Neural Language Models (paper)\n\n\n  Links\n  GitHub\n  LinkedIn"
+  }
+]

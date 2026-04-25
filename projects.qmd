@@ -1,0 +1,17 @@
+---
+title: "Projects"
+---
+
+### Enterprise Knowledge Agent Platform
+RAG + Agent architecture using LlamaIndex, LangChain, FastAPI, and MCP.
+[→ GitHub](https://github.com/ChengYuChuan/knowledge-agent)
+
+---
+
+### SHAP Imputer API
+Multi-framework SHAP value computation supporting PyTorch, JAX, NumPy, pandas, polars.
+[→ GitHub](https://github.com/ChengYuChuan/shap-imputer)
+
+---
+
+*More on [GitHub →](https://github.com/ChengYuChuan)*

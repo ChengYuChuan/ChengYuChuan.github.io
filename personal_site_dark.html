@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yu-Chuan · Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    --color-background-primary: #000000;
+    --color-background-secondary: #141414;
+    --color-text-primary: #f5f5f5;
+    --color-text-secondary: #b8b8b8;
+    --color-text-tertiary: #8a8a8a;
+    --color-border-secondary: #333333;
+    --color-border-tertiary: #242424;
+    --border-radius-lg: 8px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--color-background-primary); }
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  .site { max-width: 720px; margin: 0 auto; padding: 1.5rem 1rem; }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding-bottom: 1.5rem; border-bottom: 0.5px solid var(--color-border-tertiary); margin-bottom: 2rem; }
+  .nav-logo { font-size: 15px; font-weight: 500; color: var(--color-text-primary); letter-spacing: -0.3px; }
+  .nav-links { display: flex; gap: 20px; }
+  .nav-links a { font-size: 13px; color: var(--color-text-secondary); text-decoration: none; }
+  .nav-links a:hover { color: var(--color-text-primary); }
+  .nav-links a.active { color: var(--color-text-primary); font-weight: 500; }
+  .hero { margin-bottom: 3rem; }
+  .hero-tag { font-size: 11px; color: var(--color-text-tertiary); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.5rem; }
+  .hero h1 { font-size: 22px; font-weight: 500; color: var(--color-text-primary); line-height: 1.4; margin-bottom: 0.75rem; letter-spacing: -0.01em; }
+  .hero p { font-size: 14px; color: var(--color-text-secondary); line-height: 1.7; max-width: 520px; }
+  .section-label { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-tertiary); margin-bottom: 1rem; }
+  .filter-bar { display: flex; gap: 8px; margin-bottom: 1.5rem; flex-wrap: wrap; }
+  .filter-btn { font-size: 12px; padding: 4px 10px; border-radius: 20px; border: 0.5px solid var(--color-border-tertiary); background: transparent; color: var(--color-text-secondary); cursor: pointer; font-family: inherit; }
+  .filter-btn.on { background: var(--color-background-secondary); color: var(--color-text-primary); border-color: var(--color-border-secondary); }
+  .note-list { display: flex; flex-direction: column; gap: 0; }
+  .note-item { display: flex; gap: 16px; align-items: flex-start; padding: 1rem 0; border-bottom: 0.5px solid var(--color-border-tertiary); cursor: pointer; }
+  .note-item:hover .note-title { color: var(--color-text-secondary); }
+  .note-date { font-size: 12px; color: var(--color-text-tertiary); min-width: 56px; padding-top: 2px; font-variant-numeric: tabular-nums; flex-shrink: 0; }
+  .note-body { flex: 1; min-width: 0; }
+  .note-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 3px; line-height: 1.4; }
+  .note-desc { font-size: 13px; color: var(--color-text-secondary); line-height: 1.5; }
+  .note-tags { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; }
+  .tag { font-size: 11px; padding: 2px 7px; border-radius: 4px; }
+  .tag-ml { background: rgba(96, 165, 250, 0.15); color: #93c5fd; }
+  .tag-paper { background: rgba(167, 139, 250, 0.15); color: #c4b5fd; }
+  .tag-social { background: rgba(52, 211, 153, 0.15); color: #6ee7b7; }
+  .tag-phil { background: rgba(251, 191, 36, 0.15); color: #fcd34d; }
+  .sidebar-block { margin-top: 2.5rem; padding: 1rem 1.25rem; background: var(--color-background-secondary); border-radius: var(--border-radius-lg); }
+  .now-label { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-tertiary); margin-bottom: 0.75rem; }
+  .now-item { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 8px; }
+  .now-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--color-text-tertiary); margin-top: 5px; flex-shrink: 0; }
+  .now-text { font-size: 13px; color: var(--color-text-secondary); line-height: 1.5; }
+  .layout { display: grid; grid-template-columns: 1fr 220px; gap: 2rem; }
+  @media (max-width: 600px) { .layout { grid-template-columns: 1fr; } .sidebar-block { display: none; } }
+</style>
+</head>
+<body>
+
+<div class="site">
+  <nav class="nav">
+    <span class="nav-logo">Yu-Chuan · Notes</span>
+    <div class="nav-links">
+      <a href="#" class="active">Notes</a>
+      <a href="#">Projects</a>
+      <a href="#">About</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-tag">Reading log</div>
+    <h1>Things I read, and what I made of them.</h1>
+    <p>ML engineer based in Germany. I read across technical papers, social science, and anything in between. These are rough notes — thinking out loud, not polished essays.</p>
+  </div>
+
+  <div class="layout">
+    <div>
+      <div class="section-label">Recent notes</div>
+      <div class="filter-bar">
+        <button class="filter-btn on">All</button>
+        <button class="filter-btn">ML / Tech</button>
+        <button class="filter-btn">Papers</button>
+        <button class="filter-btn">Social science</button>
+        <button class="filter-btn">Philosophy</button>
+      </div>
+      <div class="note-list">
+        <div class="note-item">
+          <span class="note-date">Apr 18</span>
+          <div class="note-body">
+            <div class="note-title">Why SHAP values still confuse practitioners — and why that matters</div>
+            <div class="note-desc">Reading through the original Lundberg &amp; Lee paper again. The gap between what SHAP promises and what people actually interpret is wider than I thought.</div>
+            <div class="note-tags">
+              <span class="tag tag-ml">ML / Tech</span>
+              <span class="tag tag-paper">Paper</span>
+            </div>
+          </div>
+        </div>
+        <div class="note-item">
+          <span class="note-date">Apr 09</span>
+          <div class="note-body">
+            <div class="note-title">《住宅政策》— 台灣、德國、瑞典的比較</div>
+            <div class="note-desc">三個國家面對相似問題走出完全不同的路。租金管制真的有效嗎？這本書說不一定。</div>
+            <div class="note-tags">
+              <span class="tag tag-social">Social science</span>
+            </div>
+          </div>
+        </div>
+        <div class="note-item">
+          <span class="note-date">Mar 29</span>
+          <div class="note-body">
+            <div class="note-title">Attention is all you need — re-reading five years later</div>
+            <div class="note-desc">The original transformer paper reads differently once you've seen what came after. Some design choices look almost accidental in hindsight.</div>
+            <div class="note-tags">
+              <span class="tag tag-paper">Paper</span>
+              <span class="tag tag-ml">ML / Tech</span>
+            </div>
+          </div>
+        </div>
+        <div class="note-item">
+          <span class="note-date">Mar 14</span>
+          <div class="note-body">
+            <div class="note-title">Hannah Arendt on work and labour — a very rough summary</div>
+            <div class="note-desc">Distinguishing "work" from "labour" felt abstract at first. Then I thought about how we talk about ML model training and it clicked.</div>
+            <div class="note-tags">
+              <span class="tag tag-phil">Philosophy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sidebar-block">
+        <div class="now-label">Currently reading</div>
+        <div class="now-item">
+          <div class="now-dot"></div>
+          <div class="now-text">The Alignment Problem — Brian Christian</div>
+        </div>
+        <div class="now-item">
+          <div class="now-dot"></div>
+          <div class="now-text">Flash Boys — Michael Lewis</div>
+        </div>
+        <div class="now-item">
+          <div class="now-dot"></div>
+          <div class="now-text">Scaling Laws for Neural Language Models (paper)</div>
+        </div>
+      </div>
+      <div class="sidebar-block" style="margin-top: 1rem;">
+        <div class="now-label">Links</div>
+        <div class="now-item">
+          <div class="now-dot"></div>
+          <div class="now-text">GitHub</div>
+        </div>
+        <div class="now-item">
+          <div class="now-dot"></div>
+          <div class="now-text">LinkedIn</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

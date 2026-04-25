@@ -1,14 +1,101 @@
 ---
-title: "Things I read, and what I made of them."
-subtitle: "ML engineer based in Germany. Notes on tech, papers, social science, and whatever else catches my attention."
+title: "Yu-Chuan · Notes"
 listing:
+  id: notes-listing
   contents: posts
   sort: "date desc"
-  type: table
-  fields: [date, title, categories]
+  type: default
+  fields: [date, title, description, categories]
   categories: true
   sort-ui: false
-  filter-ui: true
+  filter-ui: false
   date-format: "MMM D"
-page-layout: full
+page-layout: article
 ---
+
+```{=html}
+<div class="hero">
+  <div class="hero-tag">Reading log</div>
+  <h1>Things I read, and what I made of them.</h1>
+  <p>ML engineer based in Germany. I read across technical papers, social science, and anything in between. These are rough notes — thinking out loud, not polished essays.</p>
+</div>
+```
+
+::: {.layout}
+
+::: {.main-col}
+
+::: {.section-label}
+Recent notes
+:::
+
+::: {#notes-listing}
+:::
+
+:::
+
+::: {.sidebar-outer}
+
+```{=html}
+<div class="sidebar-block">
+  <div class="now-label">Currently reading</div>
+  <div class="now-item"><div class="now-dot"></div><div class="now-text">The Alignment Problem — Brian Christian</div></div>
+  <div class="now-item"><div class="now-dot"></div><div class="now-text">Flash Boys — Michael Lewis</div></div>
+  <div class="now-item"><div class="now-dot"></div><div class="now-text">Scaling Laws for Neural Language Models (paper)</div></div>
+</div>
+<div class="sidebar-block" style="margin-top:1rem">
+  <div class="now-label">Links</div>
+  <div class="now-item"><div class="now-dot"></div><div class="now-text"><a href="https://github.com/your-username">GitHub</a></div></div>
+  <div class="now-item"><div class="now-dot"></div><div class="now-text"><a href="https://linkedin.com">LinkedIn</a></div></div>
+</div>
+```
+
+:::
+
+:::
+
+```{=html}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  // 1. If Quarto put the category filter in the margin sidebar, move it into
+  //    the listing container so it appears below "Recent notes".
+  var marginSidebar = document.getElementById('quarto-margin-sidebar');
+  var listingContainer = document.getElementById('listing-notes-listing');
+
+  if (marginSidebar && listingContainer) {
+    var catTitle  = marginSidebar.querySelector('.quarto-listing-category-title');
+    var catFilter = marginSidebar.querySelector('.quarto-listing-category');
+    if (catFilter) {
+      if (catTitle)  listingContainer.insertBefore(catTitle,  listingContainer.firstChild);
+      listingContainer.insertBefore(catFilter, listingContainer.firstChild);
+    }
+    // Hide the now-empty sidebar
+    marginSidebar.style.display = 'none';
+  }
+
+  // 2. Move per-post category tags from .metadata into .body (below description)
+  document.querySelectorAll('.quarto-post').forEach(function (post) {
+    var cats = post.querySelector('.metadata .listing-categories');
+    var body = post.querySelector('.body');
+    if (cats && body) body.appendChild(cats);
+  });
+
+  // 3. Add colour classes to tags and filter buttons by text content
+  var colorMap = [
+    { keys: ['ml', 'tech'], cls: 'tag-ml' },
+    { keys: ['paper'],      cls: 'tag-paper' },
+    { keys: ['social'],     cls: 'tag-social' },
+    { keys: ['phil'],       cls: 'tag-phil' }
+  ];
+  function applyColor(el) {
+    var t = el.textContent.trim().toLowerCase();
+    colorMap.forEach(function (m) {
+      if (m.keys.some(function (k) { return t.includes(k); })) el.classList.add(m.cls);
+    });
+  }
+  document.querySelectorAll('.listing-category, .category').forEach(applyColor);
+
+});
+</script>
+```

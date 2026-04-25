@@ -6,22 +6,19 @@ website:
   title: "Yu-Chuan · Notes"
   description: "ML engineer. Reading across tech, social science, and philosophy."
   navbar:
-    left:
+    right:
       - text: "Notes"
         href: index.qmd
       - text: "Projects"
         href: projects.qmd
       - text: "About"
         href: about.qmd
-    right:
-      - icon: github
-        href: https://github.com/your-username
   page-footer:
     center: "Yu-Chuan Chang · Built with Quarto"
 
 format:
   html:
-    theme: [flatly, custom.scss]
+    theme: [darkly, custom.scss]
     toc: false
     code-fold: true
     highlight-style: github

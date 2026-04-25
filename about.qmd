@@ -1,0 +1,15 @@
+---
+title: "About"
+---
+
+ML engineer with a background in Scientific Computing (Heidelberg University).
+I work on ML systems and occasionally write notes on things I've been reading.
+
+These are rough notes — thinking out loud, not polished essays.
+
+**Currently based in:** Germany (Weinheim / Heidelberg area)
+
+---
+
+- [GitHub](https://github.com/ChengYuChuan)
+- [LinkedIn](https://linkedin.com/in/your-profile)
